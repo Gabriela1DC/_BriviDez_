@@ -1,0 +1,49 @@
+.box-footer{
+    background-color: #17305A;
+    height:600px;
+    flex-wrap: wrap;
+}
+
+.social img{
+    display: inline-flex;
+    height: 28px;
+    width: 28px;
+
+    margin-top: 200px;
+}
+
+img{
+    height: 41px;
+    margin-top: 83px;
+    margin-left:127px;
+}
+
+ul{
+    margin-top: 83px;
+    list-style: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    color: #8B97AC;
+}
+
+li a{
+    color: #8B97AC;
+}
+
+li {
+    padding-bottom: 16px;
+}
+
+li strong{
+    color: white;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+li strong a{
+    color: white;
+    margin-bottom: 32px;
+}

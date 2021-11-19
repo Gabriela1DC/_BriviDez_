@@ -1,0 +1,82 @@
+.container-fluid{
+    background-image: url('../assets/ImagembackgoundImage-header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    flex-wrap: wrap;
+    padding-top: 52px;
+    padding-bottom: 55px;
+    padding-right: 32px;
+}
+
+img{
+    width: 150px;
+    margin-left: 107px;
+}
+
+ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+li{ 
+    margin-right: 16px;
+    color: white;
+    align-items: center;
+}
+
+.btn-link-nav a{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+button{
+    border:none;
+}
+
+#dropdownBasic1{
+    color: white;
+}
+
+#dropdownBasic1:hover{
+    background-color: rgb(255, 174, 0);
+}
+
+#dropdownBasic1:focus{
+    background-color: rgb(255, 174, 0);
+}
+
+.braedcrumb{
+    margin-left: 70px;
+    margin-bottom: 24px;
+}
+
+.box-contato h1{
+    font-size: 44px;
+    color: white;
+    line-height: 52px;
+    margin-left: 107px;
+    margin-bottom: 32px;
+}
+
+.box-contato p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: white;
+    margin-left: 107px;
+}
+
+.box-contato a{
+    text-decoration: solid;
+    color: #9ACA3C;
+}
