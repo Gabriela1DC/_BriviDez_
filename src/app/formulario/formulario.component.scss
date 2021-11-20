@@ -1,0 +1,59 @@
+form{
+    margin: 42px;
+}
+
+form textarea:focus{
+    background-color: #F0F2F5 ;
+}
+
+form input:focus{
+    background-color: #F0F2F5;
+}
+
+label{
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#CheckTermos{
+    font-size: 15px;
+    text-align: center;
+    margin-top:6px;
+}
+
+form a{
+    color: #9ACA3C;
+    text-decoration: underline;
+}
+
+input:checked{
+    background-color:#9ACA3C;
+}
+
+button{
+    width: 256px;
+    height: 44px;
+    background: #17305A;
+    border-radius: 4px;
+    color:#ffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    padding: 8px 20px;
+    margin-top:32px;
+    margin-bottom:72px;
+    margin-left:40%;
+
+
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+button:hover{
+    color:white;
+    background-color:rgb(255, 174, 0);
+}

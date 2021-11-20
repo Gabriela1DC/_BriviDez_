@@ -1,31 +1,41 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatSliderModule } from '@angular/material/slider';
-import {MatToolbarModule} from '@angular/material/toolbar';
 
 import {NgbPaginationModule, NgbAlertModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { FormularioComponent } from './contato/formulario/formulario.component';
+//import { FormularioComponent } from './contato/formulario/formulario.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { FormularioModule } from './formulario/formulario.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
+    HeaderComponent,
+    FooterComponent,
     FormularioComponent,
   ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
-    MatSliderModule,
-    MatToolbarModule,
     NgbPaginationModule,
     NgbAlertModule,
     NgbModule,
+    AppRoutingModule,
+    FormularioModule,
+    FormsModule,
   ],
+
   providers: [],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

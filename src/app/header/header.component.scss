@@ -1,5 +1,5 @@
 .container-fluid{
-    background-image: url('../assets/ImagembackgoundImage-header.png');
+    background-image: url('../../assets/ImagembackgoundImage-header.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 480px;
@@ -77,6 +77,6 @@ button{
 }
 
 .box-contato a{
-    text-decoration: solid;
+    text-decoration: underline;
     color: #9ACA3C;
 }
