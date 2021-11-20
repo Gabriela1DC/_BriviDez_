@@ -17,7 +17,7 @@ import { NgModule } from '@angular/core';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
 
   providers: [],

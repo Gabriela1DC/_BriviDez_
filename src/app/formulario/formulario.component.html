@@ -3,33 +3,34 @@
     <div class="container">
         <div class="mb-3">
             <label for="InputName" class="form-label">Seu nome completo:</label>
-            <input type="text" class="form-control" id="InputName" >
+            <input type="text" class="form-control" id="InputName"formControlName="name" >
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email:</label>
-          <input type="email" class="form-control" id="exampleInputEmail1">
+          <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
         </div>
         <div class="mb-3">
             <label for="InputTel" class="form-label">Telefone:</label>
-            <input type="tel" class="form-control" id="InputTel" >
+            <input type="tel" class="form-control" id="InputTel" formControlName="tel">
         </div>
         <div class="mb-3">
           <label for="InputAssunto" class="form-label">Assunto:</label>
-          <input type="text" class="form-control" id="InputAssunto">
+          <input type="text" class="form-control" id="InputAssunto"formControlName="assunto">
         </div>
         <div class="form-floating">
             <label for="floatingTextarea">Mensagem:</label>
             <textarea 
                 class="form-control" 
                 id="floatingTextarea"
-                style="height: 150px">
+                style="height: 150px"
+                formControlName="mensagem">
             </textarea>
           </div>
         <div class="mb-3 form-check checkBoxTermos">
           <input type="checkbox" class="form-check-input " id="CheckTermos">
           <label class="form-check-label" for="exampleCheck1">Li e concordo com os <a href="" target='blank'>Termos e Condições</a> e com a <a href="" target="blank">Políticas de Privacidade</a></label>
         </div>
-        <button type="submit" class="btn">Enviar</button> 
+        <button type="submit" (click)="onSubmit()" class="btn">Enviar <img src="../../assets/Ícone-Btn.svg"></button> 
     </div>
         
       

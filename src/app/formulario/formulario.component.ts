@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule,FormControl,FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
@@ -9,11 +9,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class FormularioComponent implements OnInit {
   formulario: FormGroup | undefined;
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(
+    private formBuilder:FormBuilder,
+    //private http:Http,
+    ) { }
 
   ngOnInit(): void {
-
-    //formulario:FormGroup;
 
     this.formulario = this.formBuilder.group({
       name:[null, [Validators.required, Validators.minLength(3)]],
@@ -23,6 +24,17 @@ export class FormularioComponent implements OnInit {
       mensagem:[null,[Validators.required,Validators.minLength(150)]],
       check:[null,Validators.requiredTrue],
     });
+  }
+
+  onSubmit() {
+
+    //console.log(this.formulario.value)
+
+    /*
+    this.http.post('https://localhost:XXXX/post',JSON.stringify(this.formulario.value))
+    .mao(res=>res)
+    .subscribe(data => console.log(data));
+    */
   }
 
 }

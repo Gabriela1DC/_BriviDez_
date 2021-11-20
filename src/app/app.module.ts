@@ -11,7 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { FormularioModule } from './formulario/formulario.module';
 
 
@@ -32,6 +32,7 @@ import { FormularioModule } from './formulario/formulario.module';
     AppRoutingModule,
     FormularioModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
 
   providers: [],
