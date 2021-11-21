@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReactiveFormsModule,FormControl,FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormControl,FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
@@ -33,7 +33,12 @@ export class FormularioComponent implements OnInit {
     /*
     this.http.post('https://localhost:XXXX/post',JSON.stringify(this.formulario.value))
     .mao(res=>res)
-    .subscribe(data => console.log(data));
+    .subscribe(data => {
+      console.log(data);
+      //RESETANDO O FORMULARIO//
+      this.formulario.reset();
+    },
+    (error:any)=>alert('erro'));
     */
   }
 
