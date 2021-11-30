@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormularioComponent } from './formulario.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { NgModule } from '@angular/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { NgModule } from '@angular/core';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    MatFormFieldModule
   ],
 
   providers: [],
