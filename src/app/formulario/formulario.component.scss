@@ -27,8 +27,8 @@ form a{
     text-decoration: underline;
 }
 
-input:checked{
-    background-color:#9ACA3C;
+.checkBoxTermos{
+  margin-bottom:32px
 }
 
 button{
@@ -36,7 +36,6 @@ button{
     height: 44px;
     background: #17305A;
     border-radius: 4px;
-    color:#ffff;
 
     display: flex;
     align-items: center;
@@ -44,11 +43,10 @@ button{
     gap:8px;
     padding-top:8px;
     padding-bottom:8px;
-    margin-top:32px;
+    margin: 0 auto;
     margin-bottom:72px;
-    margin-left:40%;
 
-
+    color:#ffff;
     font-weight: 600;
     font-size: 15px;
     line-height: 24px;
@@ -56,5 +54,5 @@ button{
 
 button:hover{
     color:white;
-    background-color:rgb(255, 174, 0);
+    background-color:rgb(245, 168, 1);
 }

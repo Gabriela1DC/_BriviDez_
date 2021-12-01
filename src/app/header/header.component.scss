@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
 }
-
+/*NavBar*/
 .box{
     flex-wrap: wrap;
     padding-top: 52px;
@@ -24,20 +24,17 @@ ul{
     display: inline-flex;
 }
 
-li{ 
+li{
     margin-right: 16px;
     color: white;
     align-items: center;
 }
-
-.btn-link-nav a{
-    color: white;
-}
-
+/* Btn ("único") */
 a{
     text-decoration: none;
     color: white;
 }
+/* Btn ("único") */
 
 button{
     border:none;
@@ -54,12 +51,16 @@ button{
 #dropdownBasic1:focus{
     background-color: rgb(255, 174, 0);
 }
+/*NavBar*/
 
+/*Migalhas de pão*/
 .braedcrumb{
     margin-left: 70px;
     margin-bottom: 24px;
 }
+/*Migalhas de pão*/
 
+/*Conato - Conteúdo do banner*/
 .box-contato h1{
     font-size: 44px;
     color: white;
@@ -80,3 +81,4 @@ button{
     text-decoration: underline;
     color: #9ACA3C;
 }
+/*Conato - Conteúdo do banner*/

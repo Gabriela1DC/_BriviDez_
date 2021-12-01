@@ -6,7 +6,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import {NgbPaginationModule, NgbAlertModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
-//import { FormularioComponent } from './contato/formulario/formulario.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormularioComponent } from './formulario/formulario.component';
