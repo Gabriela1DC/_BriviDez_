@@ -2,41 +2,41 @@
 
     <div class="container">
         <div class="mb-3">
-            <label for="InputName" class="form-label"
-            >Seu nome completo:</label>
-            <input type="text" class="form-control" id="InputName"formControlName="name">
+            <label for="InputName" class="form-label" [ngClass]="{'is-invalid':formularioForm.get('name').hasError || formularioForm.get('name').untouched || formularioForm.get('name').invalid}">Seu nome completo:</label>
+            <input type="text" class="form-control" id="InputName"formControlName="name" [ngClass]="{'is-invalid':formularioForm.get('name').hasError || formularioForm.get('name').untouched || formularioForm.get('name').invalid}">
             <div [hidden]="formularioForm.get('name').hasError || formularioForm.get('name').untouched || formularioForm.get('name').invalid">
               <p class="invalid-feedback">Preenchimento obrigatório</p>
             </div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email:</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
+          <label for="exampleInputEmail1" class="form-label" [ngClass]="{'is-invalid':formularioForm.get('email').hasError || formularioForm.get('email').untouched || formularioForm.get('email').invalid}">Email:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" [ngClass]="{'is-invalid':formularioForm.get('email').hasError || formularioForm.get('email').untouched || formularioForm.get('email').invalid}">
           <div [hidden]="formularioForm.get('email').hasError || formularioForm.get('email').untouched || formularioForm.get('email').invalid">
             <p class="invalid-feedback">Preenchimento obrigatório</p>
           </div>
         </div>
         <div class="mb-3">
-            <label for="InputTel" class="form-label">Telefone:</label>
-            <input type="tel" class="form-control" id="InputTel" formControlName="tel" >
+            <label for="InputTel" class="form-label" [ngClass]="{'is-invalid':formularioForm.get('tel').hasError || formularioForm.get('tel').untouched || formularioForm.get('tel').invalid}">Telefone:</label>
+            <input type="tel" class="form-control" id="InputTel" formControlName="tel" [ngClass]="{'is-invalid':formularioForm.get('tel').hasError || formularioForm.get('tel').untouched || formularioForm.get('tel').invalid}">
             <div [hidden]="formularioForm.get('tel').hasError || formularioForm.get('tel').untouched || formularioForm.get('tel').invalid">
               <p class="invalid-feedback">Preenchimento obrigatório</p>
             </div>
         </div>
         <div class="mb-3">
-          <label for="InputAssunto" class="form-label">Assunto:</label>
-          <input type="text" class="form-control" id="InputAssunto"formControlName="assunto" >
+          <label for="InputAssunto" class="form-label" [ngClass]="{'is-invalid':formularioForm.get('assunto').hasError || formularioForm.get('assunto').untouched || formularioForm.get('assunto').invalid}">Assunto:</label>
+          <input type="text" class="form-control" id="InputAssunto"formControlName="assunto" [ngClass]="{'is-invalid':formularioForm.get('assunto').hasError || formularioForm.get('assunto').untouched || formularioForm.get('assunto').invalid}">
           <div [hidden]="formularioForm.get('assunto').hasError || formularioForm.get('assunto').untouched || formularioForm.get('assunto').invalid">
             <p class="invalid-feedback">Preenchimento obrigatório</p>
           </div>
         </div>
         <div class="form-floating">
-            <label for="floatingTextarea">Mensagem:</label>
+            <label for="floatingTextarea" [ngClass]="{'is-invalid':formularioForm.get('mensagem').hasError || formularioForm.get('mensagem').untouched || formularioForm.get('mensagem').invalid}">Mensagem:</label>
             <textarea
                 class="form-control"
                 id="floatingTextarea"
                 style="height: 150px"
-                formControlName="mensagem">
+                formControlName="mensagem"
+                [ngClass]="{'is-invalid':formularioForm.get('mensagem').hasError || formularioForm.get('mensagem').untouched || formularioForm.get('mensagem').invalid}">
             </textarea>
             <div [hidden]="formularioForm.get('mensagem').hasError || formularioForm.get('mensagem').untouched || formularioForm.get('mensagem').invalid">
               <p class="invalid-feedback">Preenchimento obrigatório</p>
@@ -44,7 +44,11 @@
           </div>
         <div class="mb-3 form-check checkBoxTermos">
           <input type="checkbox" class="form-check-input " id="CheckTermos">
-          <label class="form-check-label" for="exampleCheck1">Li e concordo com os <a href="" target='blank'>Termos e Condições</a> e com a <a href="" target="blank">Políticas de Privacidade</a></label>
+          <label
+          class="form-check-label"
+          for="exampleCheck1"
+          formControlName="check"
+          [ngClass]="{'is-invalid':formularioForm.get('check')==false || formularioForm.get('check').untouched}">Li e concordo com os <a href="" target='blank'>Termos e Condições</a> e com a <a href="" target="blank">Políticas de Privacidade</a></label>
         </div>
         <button type="submit" [disabled]="formulario.invalid" class="btn">Enviar <img src="../../assets/Ícone-Btn.svg"></button>
     </div>
