@@ -1,3 +1,7 @@
+.container-fluid{
+  background-color: #17305A;
+}
+
 .box-footer{
     background-color: #17305A;
     height:550px;
@@ -8,6 +12,7 @@
 
 .box-social img{
     display:inline-flex;
+    padding: 0 auto;
     height:28px;
     width:28px;
 }
