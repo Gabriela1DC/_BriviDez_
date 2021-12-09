@@ -1,1 +1,59 @@
-<p>formulario works!</p>
+<div class="container">
+    <form [formGroup]="formContact" (ngSubmit)="onSubmit()">
+
+        <div class="mb-3">
+            <label for="InputName" class="form-label">Seu nome completo:</label>
+            <input type="text" class="form-control" id="InputName"formControlName="name">
+            <div>
+              <p class="invalid-feedback">Preenchimento obrigatório</p>
+            </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" >
+          <div>
+            <p class="invalid-feedback">Preenchimento obrigatório</p>
+          </div>
+        </div>
+        <div class="mb-2">
+            <label for="InputTel" class="form-label">Telefone:</label>
+            <input type="tel" class="form-control" id="InputTel" formControlName="tel">
+            <div >
+              <p class="invalid-feedback">Preenchimento obrigatório</p>
+            </div>
+        </div>
+        <div class="mb-3">
+          <label for="InputAssunto" class="form-label">Assunto:</label>
+          <input type="text" class="form-control" id="InputAssunto"formControlName="assunto">
+          <div >
+            <p class="invalid-feedback">Preenchimento obrigatório</p>
+          </div>
+        </div>
+        <div class="form-floating">
+            <label for="floatingTextarea" >Mensagem:</label>
+            <textarea
+                class="form-control"
+                id="floatingTextarea"
+                style="height: 150px"
+                formControlName="mensagem"
+                >
+            </textarea>
+            <div [hidden]="formContact.hasError || formContact.untouched || formContact.invalid">
+                <p class="invalid-feedback">Preenchimento obrigatório</p>
+            </div>
+            <div >
+              <p class="invalid-feedback">Preenchimento obrigatório</p>
+            </div>
+          </div>
+        <div class="mb-3 form-check checkBoxTermos">
+          <input type="checkbox" class="form-check-input " id="CheckTermos"formControlName="check" >
+          <label
+          class="form-check-label"
+          for="exampleCheck1"
+          
+         >Li e concordo com os <a href="" target='blank'>Termos e Condições</a> e com a <a href="" target="blank">Políticas de Privacidade</a></label>
+        </div>
+        <button type="submit" class="btn" >Enviar <img src="../../assets/Ícone-Btn.svg"></button>
+
+    </form>  
+</div>
