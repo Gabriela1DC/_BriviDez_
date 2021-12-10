@@ -20,7 +20,7 @@
         <div class="mb-2">
             <label for="InputTel" class="form-label">Telefone:</label>
             <input type="tel" class="form-control" id="InputTel" formControlName="tel" name="tel">
-            <div [hidden]="formContact.dirty || formContact.invalid" class="is-invalid || is-invalid">
+            <div [hidden]="formContact.dirty || formContact.invalid" class="is-invalid">
                 <p class="invalid-feedback">Preenchimento obrigatório</p>
             </div>
         </div>
@@ -55,7 +55,7 @@
             <p class="invalid-feedback">Preenchimento obrigatório</p>
           </div>
         </div>
-        <button type="submit" class="btn" [disabled]="formContact.untouched && formContact.dirty" >Enviar <img src="../../assets/Ícone-Btn.svg"></button>
+        <button type="submit" class="btn" [disabled]="formContact.untouched || formContact.dirty" >Enviar <img src="../../assets/Ícone-Btn.svg"></button>
 
     </form>  
 </div>

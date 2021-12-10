@@ -9,8 +9,6 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 export class FormularioComponent implements OnInit {
   formContact!: FormGroup; 
 
-   @ViewChild('fform') formularioFormDirective:any;
-
   constructor(private formBuilder: FormBuilder) { }
 
   get f() {
@@ -36,58 +34,7 @@ export class FormularioComponent implements OnInit {
      
     console.log(this.formContact.value)
     console.log(this.formContact.controls)
-    console.log(this.formContact.valid)/*
-
-    name=this.formContact.value.name
-    invalidErro=() =>{
-      if(name.invalid || name.untouched || name.dirty){
-        document.write
-      }
-    }
-    
-
-    if (this.formContact.touched){
-      if (this.formContact.valid==false){
-        alert('Formulário Inválido')
-        this.formContact.reset()
-      }else{
-      alert('Formulário enviado com sucesso')
-      this.formContact.reset()
-    }
-    }*/
-
-    const validateName = () => {
-        const name = this.formContact.value.name;
-        if(name.value.length < 3) {
-            name.nextElementSibling.classList.add('error');
-        } else {
-            name.nextElementSibling.classList.remove('error');
-        }
-    }
-
-    const validateEmail = () => {
-        const email = this.formContact.value.email;
-        const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        const emailTest = regex.test(email.value);
-
-        if(!emailTest) {
-            email.nextElementSibling.classList.add('error');
-        } else {
-            email.nextElementSibling.classList.remove('error');
-        }
-    }
-
-    const validateTel = () => {
-        const tel = this.formContact.value.tel;
-        var regexT = new RegExp('^\\(((1[1-9])|([2-9][0-9]))\\)((3[0-9]{3}-[0-9]{4})|(9[0-9]{3}-[0-9]{5}))$'); 
-        const telTest = regexT.test(tel.value);
-
-        if(tel.value.length < 11 && !telTest) {
-            tel.nextElementSibling.classList.add('error');
-        } else {
-            tel.nextElementSibling.classList.remove('error');
-        }
-    }
+    console.log(this.formContact.valid)
 
     if (this.formContact.touched){
       if (this.formContact.valid==false){
