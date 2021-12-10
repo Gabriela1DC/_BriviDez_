@@ -12,6 +12,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { FormularioModule } from './formulario/formulario.module';
+import { PhonePipe } from './shared/phone-pipe/phone.pipe';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FormularioModule } from './formulario/formulario.module';
     HeaderComponent,
     FooterComponent,
     FormularioComponent,
+    PhonePipe,
   ],
   imports: [
     BrowserModule,

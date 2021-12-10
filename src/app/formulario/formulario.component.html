@@ -4,28 +4,30 @@
         <div class="mb-3">
             <label for="InputName" class="form-label">Seu nome completo:</label>
             <input type="text" class="form-control" id="InputName"formControlName="name">
-            <div>
-              <p class="invalid-feedback">Preenchimento obrigatório</p>
+            <div [hidden]="formContact.dirty">
+                <p class="invalid-feedback">Preenchimento obrigatório</p>
             </div>
         </div>
+        
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email:</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" >
-          <div>
+          <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
+          <p *ngIf="formContact.get('email')?.errors?.required" text="Preencha o E-mail corretamente."></p>
+          <div [hidden]="formContact.dirty">
             <p class="invalid-feedback">Preenchimento obrigatório</p>
           </div>
         </div>
         <div class="mb-2">
             <label for="InputTel" class="form-label">Telefone:</label>
-            <input type="tel" class="form-control" id="InputTel" formControlName="tel">
-            <div >
-              <p class="invalid-feedback">Preenchimento obrigatório</p>
+            <input type="tel" class="form-control" id="InputTel" formControlName="tel" name="tel">
+            <div [hidden]="formContact.dirty || formContact.invalid" class="is-invalid || is-invalid">
+                <p class="invalid-feedback">Preenchimento obrigatório</p>
             </div>
         </div>
         <div class="mb-3">
           <label for="InputAssunto" class="form-label">Assunto:</label>
           <input type="text" class="form-control" id="InputAssunto"formControlName="assunto">
-          <div >
+          <div [hidden]="formContact.dirty">
             <p class="invalid-feedback">Preenchimento obrigatório</p>
           </div>
         </div>
@@ -38,22 +40,22 @@
                 formControlName="mensagem"
                 >
             </textarea>
-            <div [hidden]="formContact.hasError || formContact.untouched || formContact.invalid">
+            <div [hidden]="formContact.dirty">
                 <p class="invalid-feedback">Preenchimento obrigatório</p>
             </div>
-            <div >
-              <p class="invalid-feedback">Preenchimento obrigatório</p>
-            </div>
-          </div>
+        </div>
         <div class="mb-3 form-check checkBoxTermos">
           <input type="checkbox" class="form-check-input " id="CheckTermos"formControlName="check" >
           <label
           class="form-check-label"
           for="exampleCheck1"
-          
-         >Li e concordo com os <a href="" target='blank'>Termos e Condições</a> e com a <a href="" target="blank">Políticas de Privacidade</a></label>
+          >
+          Li e concordo com os <a href="" target='blank'>Termos e Condições</a> e com a <a href="" target="blank">Políticas de Privacidade</a></label>
+          <div [hidden]="formContact.dirty">
+            <p class="invalid-feedback">Preenchimento obrigatório</p>
+          </div>
         </div>
-        <button type="submit" class="btn" >Enviar <img src="../../assets/Ícone-Btn.svg"></button>
+        <button type="submit" class="btn" [disabled]="formContact.untouched && formContact.dirty" >Enviar <img src="../../assets/Ícone-Btn.svg"></button>
 
     </form>  
 </div>
